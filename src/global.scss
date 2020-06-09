@@ -24,3 +24,9 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+*:focus {
+    outline: none;
+}
+ion-header {
+    background-color: var(--ion-color-primary);
+}
