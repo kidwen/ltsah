@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import { HomeTabsComponent } from './home-tabs.component';
 
 const routes: Routes = [
     {
         path: 'tabs',
-        component: TabsPage,
+        component: HomeTabsComponent,
         children: [
             {
                 path: '',
@@ -17,7 +17,7 @@ const routes: Routes = [
                 loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
             },
             {
-                path: 'tab2',
+                path: 'user',
                 loadChildren: () => import('../user/user.module').then(m => m.UserModule)
             },
             {
@@ -37,4 +37,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class TabsPageRoutingModule { }
+export class HomeTabsRoutingModule { }
