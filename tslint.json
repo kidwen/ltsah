@@ -7,7 +7,9 @@
                 "statements"
             ]
         },
-        "array-type": false,
+        "array-type": [true, "generic"],
+        "no-trailing-whitespace": true,
+        "trailing-comma": true,
         "arrow-return-shorthand": true,
         "curly": true,
         "deprecation": {
@@ -20,6 +22,7 @@
         ],
         "contextual-lifecycle": true,
         "directive-class-suffix": true,
+        "type-literal-delimiter": true,
         "directive-selector": [
             true,
             "attribute",
@@ -61,13 +64,21 @@
         ],
         "no-console": [
             true,
+            "log",
             "debug",
-            "info",
             "time",
             "timeEnd",
             "trace"
         ],
-        "no-empty": false,
+        "no-use-before-declare": true,
+        "strict-string-expressions": true,
+        "unnecessary-constructor": true,
+        "invalid-void": true,
+        "max-file-line-count": [true, 500],
+        "no-invalid-template-strings": true,
+        "no-return-await": true,
+        "no-any": true,
+        "no-empty": true,
         "no-inferrable-types": [
             true,
             "ignore-params"
@@ -98,6 +109,8 @@
                 "named": "never"
             }
         },
+        "typedef": true,
+        "await-promise": true,
         "typedef-whitespace": {
             "options": [{
                     "call-signature": "nospace",
