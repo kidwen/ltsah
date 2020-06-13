@@ -1,0 +1,2 @@
+- name: Angular Github Actions
+  uses: mayurrawte/github-angular-actions@latest
