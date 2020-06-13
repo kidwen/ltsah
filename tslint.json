@@ -7,7 +7,10 @@
                 "statements"
             ]
         },
-        "array-type": [true, "generic"],
+        "array-type": [
+            true,
+            "generic"
+        ],
         "no-trailing-whitespace": true,
         "trailing-comma": true,
         "arrow-return-shorthand": true,
@@ -27,13 +30,15 @@
             true,
             "attribute",
             "app",
-            "camelCase"
+            "camelCase",
+            "n"
         ],
         "component-selector": [
             true,
             "element",
             "app",
-            "kebab-case"
+            "kebab-case",
+            "n"
         ],
         "eofline": true,
         "import-blacklist": [
@@ -74,7 +79,10 @@
         "strict-string-expressions": true,
         "unnecessary-constructor": true,
         "invalid-void": true,
-        "max-file-line-count": [true, 500],
+        "max-file-line-count": [
+            true,
+            500
+        ],
         "no-invalid-template-strings": true,
         "no-return-await": true,
         "no-any": true,
@@ -112,7 +120,8 @@
         "typedef": true,
         "await-promise": true,
         "typedef-whitespace": {
-            "options": [{
+            "options": [
+                {
                     "call-signature": "nospace",
                     "index-signature": "nospace",
                     "parameter": "nospace",

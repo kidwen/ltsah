@@ -22,7 +22,7 @@ const routes: Routes = [
             },
             {
                 path: 'pleasure',
-                loadChildren: () => import('../pleasure/pleasure.module').then(m => m.pleasureModule)
+                loadChildren: () => import('../pleasure/pleasure.module').then(m => m.PleasureModule)
             },
         ]
     },

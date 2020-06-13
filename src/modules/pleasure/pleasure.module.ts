@@ -20,4 +20,4 @@ import { PleasureComponent } from './pleasure.component';
         PleasureComponent,
     ]
 })
-export class pleasureModule { }
+export class PleasureModule { }
