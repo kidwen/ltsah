@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { PleasureRoutingModule } from './pleasure-routing.module';
-import { PleasureComponent } from './pleasure.component';
+import { PleasureComponent } from './component/pleasure.component';
 
 @NgModule({
     imports: [
