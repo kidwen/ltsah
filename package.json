@@ -52,5 +52,9 @@
         "tslint": "~6.1.0",
         "typescript": "~3.8.3"
     },
-    "description": "An Ionic project"
+    "description": "An Ionic project only style like zhihu",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kidwen/lookMe.git"
+    },
 }
