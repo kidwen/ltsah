@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TankModule } from './tank/tank.module';
 
 @NgModule({
     declarations: [
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
         BrowserModule,
         IonicModule.forRoot(),
         AppRoutingModule,
+        TankModule,
     ],
     providers: [
         StatusBar,
