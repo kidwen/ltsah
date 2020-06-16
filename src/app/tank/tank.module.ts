@@ -3,10 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 const lazyModules: Routes = [{
-    path: 'device-list',
-    loadChildren: () => import('../../modules/user/user.module').then(m => m.UserModule),
+    path: 'potal',
+    loadChildren: () => import('../../modules/portal/portal.module').then(m => m.PotalModule),
 }];
 
 const routes: Routes = [{
@@ -27,6 +30,9 @@ const routes: Routes = [{
 @NgModule({
     imports: [
         RouterModule.forChild(routes),
+        IonicModule,
+        CommonModule,
+        FormsModule,
     ],
     declarations: [
         LoginComponent,
