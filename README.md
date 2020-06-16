@@ -2,11 +2,11 @@
 
 [ionic](https://ionicframework.com/docs/) [capacitor](https://capacitor.ionicframework.com/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+This project was generated with [Ionic CLI](https://ionicframework.com/docs/cli) version 5.4.16.
 
 ## Development server
 
-Run `npm run start` for a dev server. Navigate to `http://localhost:8800/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
