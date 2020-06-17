@@ -1,6 +1,6 @@
 # lookMe
 
-[ionic](https://ionicframework.com/docs/) [capacitor](https://capacitor.ionicframework.com/)
+Use [ionic](https://ionicframework.com/docs/) and [capacitor](https://capacitor.ionicframework.com/)
 
 This project was generated with [Ionic CLI](https://ionicframework.com/docs/cli) version 5.4.16.
 
