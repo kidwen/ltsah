@@ -18,6 +18,6 @@ import { PleasureComponent } from './component/pleasure.component';
     ],
     declarations: [
         PleasureComponent,
-    ]
+    ],
 })
 export class PleasureModule { }
