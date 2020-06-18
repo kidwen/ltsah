@@ -13,7 +13,7 @@ import { UserRoutingModule } from './user-routing.module';
         CommonModule,
         FormsModule,
         ExploreContainerComponentModule,
-        UserRoutingModule
+        UserRoutingModule,
     ],
     declarations: [
         UserListComponent,

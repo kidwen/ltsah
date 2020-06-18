@@ -12,7 +12,13 @@
             "generic"
         ],
         "no-trailing-whitespace": true,
-        "trailing-comma": true,
+        "trailing-comma": [
+            true,
+            {
+                "multiline": "always",
+                "singleline": "never"
+            }
+        ],
         "arrow-return-shorthand": true,
         "curly": true,
         "deprecation": {
