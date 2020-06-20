@@ -1,4 +1,4 @@
-package com.getcapacitor.myapp;
+package com.getcapacitor.lookMe;
 
 import org.junit.Test;
 
