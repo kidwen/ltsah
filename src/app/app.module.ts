@@ -15,6 +15,7 @@ import { PotalModule } from 'src/modules/portal/portal.module';
     ],
     imports: [
         BrowserModule,
+        PotalModule,
         RouterModule.forRoot([], { preloadingStrategy: PreloadAllModules }),
         IonicModule.forRoot({
             backButtonText: '',

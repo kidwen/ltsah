@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 
 export class HomeComponent {
 
+    public realTimeHotspot: string = '湖南某聂姓名男子居然是万人迷';
 }

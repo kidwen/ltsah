@@ -15,5 +15,8 @@ import { PotalRoutingModule } from './portal-routing.module';
     declarations: [
         PotalListComponent,
     ],
+    exports: [
+        PotalListComponent,
+    ],
 })
 export class PotalModule { }
