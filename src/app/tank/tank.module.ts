@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 const lazyModules: Routes = [{
     path: 'potal',
     loadChildren: () => import('../../modules/portal/portal.module').then(m => m.PotalModule),
+}, {
+    path: 'user',
+    loadChildren: () => import('../../modules/user/user.module').then(m => m.UserModule),
 }];
 
 const routes: Routes = [{
