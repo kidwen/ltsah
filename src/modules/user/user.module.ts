@@ -2,7 +2,7 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { UserListComponent } from './components/user-list/user-list.component';
+import { UserPreviewComponent } from './components/user-preview/user-preview.component';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { UserRoutingModule } from './user-routing.module';
@@ -16,7 +16,7 @@ import { UserRoutingModule } from './user-routing.module';
         UserRoutingModule,
     ],
     declarations: [
-        UserListComponent,
+        UserPreviewComponent,
     ],
 })
 export class UserModule { }

@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button>
+                <ion-icon name="scan-outline"></ion-icon>
+            </ion-button>
+            <ion-searchbar></ion-searchbar>
+            <ion-button>
+                <ion-icon name="moon-outline"></ion-icon>
+            </ion-button>
+            <ion-button>
+                <ion-icon name="cube-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <img [src]="user?.avatarUrl">
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
