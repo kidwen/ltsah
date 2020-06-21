@@ -38,4 +38,4 @@ jobs:
               env:
                 NODE_AUTH_TOKEN: ${{ secrets.TSLINT_TOKEN }}
             - run: npm run lint
-            - run: npm run build --if-present
+            - run: npm run build # --if-present
