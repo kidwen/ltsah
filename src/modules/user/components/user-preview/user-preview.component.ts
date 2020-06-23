@@ -13,8 +13,14 @@ export class UserPreviewComponent implements OnInit {
             avatarUrl: '',
         };
     }
+
+    public userMain(): void {
+        return;
+    }
 }
 
 export interface User {
+    name?: string;
     avatarUrl?: string;
+    faceValue?: string;
 }

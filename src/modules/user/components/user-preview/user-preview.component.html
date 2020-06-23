@@ -18,7 +18,30 @@
     <ion-card>
         <ion-card-content>
             <ion-item>
-                <img [src]="user?.avatarUrl">
+                <ion-img [src]="user?.avatarUrl" (click)="userMain();"></ion-img>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>{{user?.name}}</ion-col>
+                        <ion-button slot="clear">
+                            <ion-icon></ion-icon>
+                        </ion-button>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-chip>
+                                <ion-button>
+                                    <ion-label>知乎盐值：</ion-label>
+                                    {{user.faceValue}}
+                                    <ion-icon></ion-icon>
+                                </ion-button>
+                            </ion-chip>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ion-button (click)="userMain();">
+                    <ion-label>个人主页</ion-label>
+                    <ion-icon></ion-icon>
+                </ion-button>
             </ion-item>
         </ion-card-content>
     </ion-card>
