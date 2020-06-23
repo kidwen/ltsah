@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { IonicModule } from '@ionic/angular';
+import { RecommendComponent } from './components/home/component/recommend.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 
@@ -38,8 +39,9 @@ const routes: Routes = [{
         FormsModule,
     ],
     declarations: [
-        LoginComponent,
         HomeComponent,
+        LoginComponent,
+        RecommendComponent,
     ],
     exports: [],
     providers: [
