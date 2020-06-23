@@ -1,11 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { IonicModule } from '@ionic/angular';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 const lazyModules: Routes = [{
     path: 'potal',

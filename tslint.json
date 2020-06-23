@@ -5,7 +5,8 @@
             true,
             "element",
             "app",
-            "kebab-case"
+            "kebab-case",
+            "n"
         ]
     },
     "rulesDirectory": [
