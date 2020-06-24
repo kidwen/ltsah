@@ -4,6 +4,10 @@ Use [ionic](https://ionicframework.com/docs/)、 [capacitor](https://capacitor.i
 
 This project was generated with [Ionic CLI](https://ionicframework.com/docs/cli) version 5.4.16.
 
+## Install package
+
+Run `npm i` or `npm install` to install the package for this project 
+
 ## Development server
 
 Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
