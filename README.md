@@ -6,7 +6,7 @@ This project was generated with [Ionic CLI](https://ionicframework.com/docs/cli)
 
 ## Install package
 
-Run `npm i` or `npm install` to install the package for this project 
+Run `npm i` or `npm install` to install the reference package for this project 
 
 ## Development server
 
