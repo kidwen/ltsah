@@ -20,6 +20,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Android tests
+
+Run `npx cap copy` and `npx cap open` then select the `Android` options
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
