@@ -5,7 +5,7 @@
                 <ion-icon name="scan-outline"></ion-icon>
             </ion-button>
             <ion-searchbar></ion-searchbar>
-            <ion-button>
+            <ion-button (click)="toggleTheme();">
                 <ion-icon name="moon-outline"></ion-icon>
             </ion-button>
             <ion-button>
@@ -29,7 +29,7 @@
                     <ion-row>
                         <ion-col>
                             <ion-chip>
-                                <ion-button>
+                                <ion-button fill="clear">
                                     <ion-label>知乎盐值：</ion-label>
                                     {{user.faceValue}}
                                     <ion-icon></ion-icon>
@@ -38,7 +38,7 @@
                         </ion-col>
                     </ion-row>
                 </ion-grid>
-                <ion-button (click)="userMain();">
+                <ion-button fill="clear" (click)="userMain();">
                     <ion-label>个人主页</ion-label>
                     <ion-icon></ion-icon>
                 </ion-button>
