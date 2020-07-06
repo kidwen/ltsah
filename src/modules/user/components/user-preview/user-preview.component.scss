@@ -1,0 +1,11 @@
+:host(app-user) {
+    ion-header {
+        ion-toolbar {
+            text-align: center;
+
+            ion-buttons {
+                display: contents;
+            }
+        }
+    }
+}

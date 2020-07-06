@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-tab2',
+    selector: 'app-user',
     templateUrl: './user-preview.component.html',
     styleUrls: ['./user-preview.component.scss'],
 })
@@ -20,7 +20,7 @@ export class UserPreviewComponent implements OnInit {
     }
 
     public toggleTheme(): void {
-        this.document.body.classList.toggle('light');
+        this.document.body.classList.toggle('dark');
     }
 
     public userMain(): void {
