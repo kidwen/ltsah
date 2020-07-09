@@ -11,9 +11,9 @@
     "private": true,
     "dependencies": {
         "@angular/common": "^10.0.2",
-        "@angular/core": "^9.1.11",
+        "@angular/core": "^10.0.3",
         "@angular/forms": "^10.0.2",
-        "@angular/platform-browser": "^9.1.11",
+        "@angular/platform-browser": "^10.0.3",
         "@angular/platform-browser-dynamic": "^10.0.2",
         "@angular/router": "^10.0.2",
         "@auth0/angular-jwt": "^5.0.1",
