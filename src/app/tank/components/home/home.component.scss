@@ -7,5 +7,19 @@
                 }
             }
         }
+
+        ion-segment {
+            ion-segment-button {
+                color: black;
+                font-size: smaller;
+                --background: #ffffff;
+                --background-checked: #ffffff;
+
+                ::ng-deep .segment-button-checked {
+                    font-family: cursive;
+                    font-size: larger;
+                }
+            }
+        }
     }
 }
