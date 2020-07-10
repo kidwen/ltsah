@@ -8,10 +8,11 @@
             <ion-icon name="add-circle-outline"></ion-icon>
         </ion-buttons>
     </ion-toolbar>
-    <ion-segment (ionChange)="segmentChanged($event)" [color]="'Light'" value="recommend">
+    <ion-segment [color]="'Light'" value="recommend">
         <ion-segment-button value="watching">关注</ion-segment-button>
         <ion-segment-button value="recommend">推荐</ion-segment-button>
         <ion-segment-button value="hotBot">热搜</ion-segment-button>
+        <ion-segment-button value="hotBot">高考</ion-segment-button>
     </ion-segment>
 </ion-header>
 <ion-content>
