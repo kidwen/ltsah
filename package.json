@@ -4,7 +4,7 @@
   "author": "kidwen",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --hmr",
     "build": "ng build",
     "lint": "ng lint"
   },
@@ -44,7 +44,7 @@
     "protractor": "^7.0.0",
     "ts-node": "^9.0.0",
     "tslint": "^6.1.3",
-    "typescript": "^4.0.5"
+    "typescript": "4.0.5"
   },
   "resolutions": {
     "webpack": "5.4.0"

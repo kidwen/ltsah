@@ -9,11 +9,14 @@ import { Component, Inject, OnInit } from '@angular/core';
 export class UserPreviewComponent implements OnInit {
     public user?: User;
 
+    public num: number = 1;
+
     public constructor(
         @Inject(DOCUMENT) private document: HTMLDocument,
     ) { }
 
     public ngOnInit(): void {
+        console.log('--hmr 无刷新Init，没有改变的话保存也不刷新');
         this.user = {
             avatarUrl: '',
         };
@@ -24,7 +27,7 @@ export class UserPreviewComponent implements OnInit {
     }
 
     public userMain(): void {
-        return;
+        this.num = this.num + 1;
     }
 }
 
