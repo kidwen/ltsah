@@ -1,5 +1,4 @@
 {
-    "extends": "@kidwen/tslint/tslint.json",
     "rules": {
         "component-selector": [
             true,
