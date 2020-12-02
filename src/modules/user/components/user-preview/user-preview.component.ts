@@ -16,7 +16,7 @@ export class UserPreviewComponent implements OnInit {
     ) { }
 
     public ngOnInit(): void {
-        console.log('--hmr 无刷新Init，没有改变的话保存也不刷新');
+        console.info('--hmr 无刷新Init，没有改变的话保存也不刷新');
         this.user = {
             avatarUrl: '',
         };
