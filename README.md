@@ -1,3 +1,5 @@
+![CI](https://github.com/kidwen/lookMe/workflows/CI/badge.svg)
+
 # lookMe
 
 Use [ionic](https://ionicframework.com/docs/)、 [capacitor](https://capacitor.ionicframework.com/) and [ionicons](https://ionicons.com/)
