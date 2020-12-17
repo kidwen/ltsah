@@ -1,4 +1,4 @@
-![CI](https://github.com/kidwen/lookMe/workflows/CI/badge.svg)
+![CI](https://github.com/kidwen/lookMe/workflows/Angular CI/badge.svg)
 
 # lookMe
 
