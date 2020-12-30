@@ -10,10 +10,10 @@
 
         ion-segment {
             ion-segment-button {
-                color: black;
+                color: var(--ion-color-warning-contrast);
                 font-size: smaller;
-                --background: #ffffff;
-                --background-checked: #ffffff;
+                --background: var(--ion-color-primary-contrast);
+                --background-checked: var(--ion-color-primary-contrast);
 
                 ::ng-deep .segment-button-checked {
                     font-family: cursive;
