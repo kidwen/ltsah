@@ -6,7 +6,8 @@
         "ng": "ng",
         "start": "ng serve --hmr",
         "build": "ng build",
-        "lint": "ng lint"
+        "lint": "ng lint",
+        "postinstall": "ngcc"
     },
     "private": true,
     "dependencies": {
