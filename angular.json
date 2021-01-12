@@ -43,10 +43,18 @@
                     },
                     "configurations": {
                         "production": {
+                            "aot": true,
+                            "budgets": [
+                                {
+                                    "maximumError": "5mb",
+                                    "maximumWarning": "2mb",
+                                    "type": "initial"
+                                }
+                            ],
                             "fileReplacements": [
                                 {
                                     "replace": "src/environments/environment.ts",
-                                    "with": "src/environments/environment.prod.ts"
+                                    "with": "src/environments/environment.ts"
                                 }
                             ],
                             "optimization": true,
@@ -54,17 +62,9 @@
                             "sourceMap": false,
                             "extractCss": true,
                             "namedChunks": false,
-                            "aot": true,
                             "extractLicenses": true,
                             "vendorChunk": false,
-                            "buildOptimizer": true,
-                            "budgets": [
-                                {
-                                    "type": "initial",
-                                    "maximumWarning": "2mb",
-                                    "maximumError": "5mb"
-                                }
-                            ]
+                            "buildOptimizer": true
                         },
                         "ci": {
                             "progress": false
