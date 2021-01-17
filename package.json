@@ -27,6 +27,7 @@
         "@kidwen/tslint": "^0.0.6",
         "rxjs": "^6.6.3",
         "tslib": "^2.0.3",
+        "tslint-eslint-rules": "^5.4.0",
         "zone.js": "^0.11.3"
     },
     "devDependencies": {
