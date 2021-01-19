@@ -22,7 +22,7 @@
             "@kidwen/shared": [
                 "src/app/shared"
             ]
-        },
+        }
     },
     "angularCompilerOptions": {
         "fullTemplateTypeCheck": true,

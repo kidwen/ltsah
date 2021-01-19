@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PreloadAllModules, RouteReuseStrategy, RouterModule } from '@angular/router';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -32,6 +32,9 @@ import { TankModule } from './tank/tank.module';
     ],
     bootstrap: [
         AppComponent,
+    ],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,
     ],
 })
 export class AppModule { }
