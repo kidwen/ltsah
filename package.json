@@ -8,7 +8,8 @@
         "build": "ng build",
         "lint": "ng lint",
         "postinstall": "ngcc",
-        "capopen": "npx cap  sync && npx cap open android"
+        "capopen": "ng build --prod && npx cap sync && npx cap open android",
+        "debug:apk": "ng build --prod && cd ./android && gradle --no-daemon assembleDebug && adb devices && adb shell am force-stop io.ionic.starter && adb install -r ./app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n io.ionic.starter/io.ionic.starter.MainActivity"
     },
     "private": true,
     "dependencies": {
@@ -28,7 +29,6 @@
         "@ionic/pwa-elements": "^3.0.2",
         "rxjs": "^6.6.3",
         "tslib": "^2.0.3",
-        "tslint-eslint-rules": "^5.4.0",
         "zone.js": "^0.11.3"
     },
     "devDependencies": {
@@ -49,6 +49,7 @@
         "protractor": "^7.0.0",
         "ts-node": "^9.0.0",
         "tslint": "^6.1.3",
+        "tslint-eslint-rules": "^5.4.0",
         "typescript": "~4.0.5"
     },
     "engines": {
