@@ -1,4 +1,4 @@
-[![CI][CI]]
+![CI](https://github.com/kidwen/lookMe/workflows/Angular-CI/badge.svg)
 
 # lookMe
 
