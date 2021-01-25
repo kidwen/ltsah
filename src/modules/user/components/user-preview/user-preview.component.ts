@@ -1,5 +1,8 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
+import { StateStore } from '@kidwen/state';
+import { Select, Store } from '@ngxs/store';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-user',
@@ -7,13 +10,20 @@ import { Component, Inject, OnInit } from '@angular/core';
     styleUrls: ['./user-preview.component.scss'],
 })
 export class UserPreviewComponent implements OnInit {
+
     public user?: User;
 
     public num: number = 1;
 
+    @Select((state: StateStore) => state.user)
+    public user$: Observable<User>;
+
     public constructor(
         @Inject(DOCUMENT) private document: HTMLDocument,
-    ) { }
+        private store: Store,
+    ) {
+        this.store.dispatch((state: StateStore) => state.user);
+    }
 
     public ngOnInit(): void {
         console.info('--hmr 无刷新Init，没有改变的话保存也不刷新');

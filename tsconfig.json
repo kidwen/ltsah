@@ -21,6 +21,9 @@
         "paths": {
             "@kidwen/shared": [
                 "src/app/shared"
+            ],
+            "@kidwen/state":[
+                "src/app/state"
             ]
         }
     },

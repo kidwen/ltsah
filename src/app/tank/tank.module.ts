@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { IonicModule } from '@ionic/angular';
 import { SharedModule } from '../shared/shared.module';
+import { StateModule } from '../state/state.module';
 import { RecommendComponent } from './components/home/component/recommend.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -39,6 +40,7 @@ const routes: Routes = [{
         CommonModule,
         FormsModule,
         SharedModule,
+        StateModule,
     ],
     declarations: [
         HomeComponent,
