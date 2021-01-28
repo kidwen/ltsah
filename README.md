@@ -27,3 +27,4 @@ Run `npx cap copy` and `npx cap open` then select the `Android` options
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 [CI]: https://github.com/kidwen/lookMe/workflows/Angular-CI/badge.svg
+
