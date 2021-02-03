@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
     <ion-toolbar>
         <ion-buttons slot="secondary">
             <ion-icon name="tv-outline"></ion-icon>
@@ -17,6 +17,28 @@
 </ion-header>
 <ion-content>
     <app-recommend></app-recommend>
-</ion-content>
-<ion-footer>
-</ion-footer>
+</ion-content> -->
+<ion-tabs>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+            <ion-icon name="newspaper-outline"></ion-icon>
+            <ion-label>首页</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="vip">
+            <ion-icon name="triangle"></ion-icon>
+            <ion-label>会员</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="found">
+            <ion-icon name="triangle"></ion-icon>
+            <ion-label>发现</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="message">
+            <ion-icon name="ellipse"></ion-icon>
+            <ion-label>消息</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="my">
+            <ion-icon name="color-palette-outline"></ion-icon>
+            <ion-label>我的home</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>
