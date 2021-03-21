@@ -5,7 +5,7 @@ import { UserState } from './user/user.state';
 
 @NgModule({
     imports: [
-        NgxsModule.forFeature([UserState]),
+        NgxsModule.forRoot([UserState]),
     ],
     exports: [],
     declarations: [],
