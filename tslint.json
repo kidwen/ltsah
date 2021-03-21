@@ -6,7 +6,8 @@
             "element",
             "app",
             "kebab-case"
-        ]
+        ],
+        "deprecation": false
     },
     "rulesDirectory": [
         "codelyzer"
