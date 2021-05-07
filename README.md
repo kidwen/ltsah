@@ -6,6 +6,10 @@ Use [ionic](https://ionicframework.com/docs/)、 [capacitor](https://capacitor.i
 
 This project was generated with [Ionic CLI](https://ionicframework.com/docs/cli) version 5.4.16.
 
+##  ltsah
+
+ltsah is short for 'love to see and hear' The Chinese name is "喜闻乐见"
+
 ## Install package
 
 Run `npm i` or `npm install` to install the reference package for this project 
