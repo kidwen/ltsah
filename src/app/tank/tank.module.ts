@@ -20,7 +20,7 @@ const lazyModules: Routes = [{
 
 const routes: Routes = [{
     path: '',
-    redirectTo: 'potal',
+    redirectTo: 'home',
     pathMatch: 'full',
 }, {
     path: 'login',
@@ -28,9 +28,12 @@ const routes: Routes = [{
 }, {
     path: 'home',
     component: HomeComponent,
-}, ...lazyModules, {
+    children: [
+        ...lazyModules,
+    ],
+}, {
     path: '**',
-    redirectTo: 'potal',
+    redirectTo: 'home',
 }];
 
 @NgModule({

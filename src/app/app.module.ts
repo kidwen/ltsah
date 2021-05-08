@@ -4,7 +4,6 @@ import { PreloadAllModules, RouteReuseStrategy, RouterModule } from '@angular/ro
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { PotalModule } from 'src/modules/portal/portal.module';
 import { AppComponent } from './app.component';
 import { TankModule } from './tank/tank.module';
 
@@ -14,10 +13,9 @@ import { TankModule } from './tank/tank.module';
     ],
     imports: [
         BrowserModule,
-        PotalModule,
         RouterModule.forRoot([], { preloadingStrategy: PreloadAllModules }),
         IonicModule.forRoot({
-            backButtonText: '',
+            backButtonText: '<',
         }),
         TankModule,
     ],

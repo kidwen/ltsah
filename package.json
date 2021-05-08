@@ -3,7 +3,6 @@
     "version": "0.0.1",
     "author": "kidwen",
     "scripts": {
-        "ng": "ng",
         "start": "ng serve --hmr",
         "build": "ng build",
         "lint": "ng lint",
