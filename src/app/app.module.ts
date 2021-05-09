@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { TankModule } from './tank/tank.module';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { TankModule } from './tank/tank.module';
     ],
     providers: [
         MusicControls,
+        NativeAudio,
         StatusBar,
         SplashScreen,
         {
