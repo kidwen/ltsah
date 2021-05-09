@@ -29,6 +29,11 @@ const routes: Routes = [{
     path: 'home',
     component: HomeComponent,
     children: [
+        {
+            path: '',
+            redirectTo: 'potal',
+            pathMatch: 'full',
+        },
         ...lazyModules,
     ],
 }, {
