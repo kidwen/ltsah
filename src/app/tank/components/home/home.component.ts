@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MusicControls } from '@ionic-native/music-controls/ngx';
-import { NgxsOnInit, StateContext } from '@ngxs/store';
 
 @Component({
     selector: 'app-home',
@@ -8,7 +7,7 @@ import { NgxsOnInit, StateContext } from '@ngxs/store';
     styleUrls: ['./home.component.scss'],
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
     public realTimeHotspot: string = '湖南某聂姓名男子居然是万人迷';
 
@@ -53,64 +52,66 @@ export class HomeComponent {
             notificationIcon: 'notification',
         }).then().catch();
 
-        this.musicControls.subscribe().subscribe(action => {
-            function events(action) {
-                const message = JSON.parse(action).message;
-                switch (message) {
-                    case 'music-controls-next':
-                        // Do something
-                        break;
-                    case 'music-controls-previous':
-                        // Do something
-                        break;
-                    case 'music-controls-pause':
-                        // Do something
-                        break;
-                    case 'music-controls-play':
-                        // Do something
-                        break;
-                    case 'music-controls-destroy':
-                        // Do something
-                        break;
-
-                    // External controls (iOS only)
-                    case 'music-controls-toggle-play-pause':
-                        // Do something
-                        break;
-                    case 'music-controls-seek-to':
-                        const seekToInSeconds = JSON.parse(action).position;
-                        this.musicControls.updateElapsed({
-                            elapsed: seekToInSeconds,
-                            isPlaying: true
-                        });
-                        // Do something
-                        break;
-                    case 'music-controls-skip-forward':
-                        // Do something
-                        break;
-                    case 'music-controls-skip-backward':
-                        // Do something
-                        break;
-
-                    // Headset events (Android only)
-                    // All media button events are listed below
-                    case 'music-controls-media-button':
-                        // Do something
-                        break;
-                    case 'music-controls-headset-unplugged':
-                        // Do something
-                        break;
-                    case 'music-controls-headset-plugged':
-                        // Do something
-                        break;
-                    default:
-                        break;
-                }
-            }
+        this.musicControls.subscribe().subscribe((action: string) => {
+            this.events(action);
         });
 
         this.musicControls.listen(); // activates the observable above
 
         this.musicControls.updateIsPlaying(true);
+    }
+
+    public events(action: string): void {
+        const message: string = (JSON.parse(action) as { message: string }).message;
+        switch (message) {
+            case 'music-controls-next':
+                // Do something
+                break;
+            case 'music-controls-previous':
+                // Do something
+                break;
+            case 'music-controls-pause':
+                // Do something
+                break;
+            case 'music-controls-play':
+                // Do something
+                break;
+            case 'music-controls-destroy':
+                // Do something
+                break;
+
+            // External controls (iOS only)
+            case 'music-controls-toggle-play-pause':
+                // Do something
+                break;
+            case 'music-controls-seek-to':
+                const seekToInSeconds: number = (JSON.parse(action) as { position: number }).position;
+                this.musicControls.updateElapsed({
+                    elapsed: seekToInSeconds,
+                    isPlaying: true,
+                });
+                // Do something
+                break;
+            case 'music-controls-skip-forward':
+                // Do something
+                break;
+            case 'music-controls-skip-backward':
+                // Do something
+                break;
+
+            // Headset events (Android only)
+            // All media button events are listed below
+            case 'music-controls-media-button':
+                // Do something
+                break;
+            case 'music-controls-headset-unplugged':
+                // Do something
+                break;
+            case 'music-controls-headset-plugged':
+                // Do something
+                break;
+            default:
+                break;
+        }
     }
 }
