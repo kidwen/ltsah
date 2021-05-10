@@ -23,14 +23,17 @@ export class PotalListComponent {
     }
 
     public playMusic(): void {
+        if (this.audio) {
+            return;
+        }
         this.audio = new Audio();
         this.audio.src = 'https://aod.cos.tx.xmcdn.com/group72/M04/41/AF/wKgO0F4lfeTAnAnOAKsbpMyVdhs568.m4a';
-        this.audio.play();
+        this.audio.play().catch();
         // this.nativeAudio.play('uniqueId1').then(() => this.interaction.toast('load ok'), error => this.interaction.toast(`load failed: ${error}`));
     }
 
-    public continueMusic():void{
-        this.audio?.play();
+    public continueMusic(): void {
+        this.audio?.play().catch();
     }
 
     public stopMusic(): void {
