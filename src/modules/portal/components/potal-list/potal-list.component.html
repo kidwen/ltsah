@@ -5,6 +5,7 @@
 
 </ion-content>
 <ion-footer>
+    <ion-label *ngIf="audio">正在播放第{{ currentPosition + 1 }}集</ion-label>
     <ion-button (click)="playMusic();">
         {{ audio ? 'replay' : 'play' }}
     </ion-button>
@@ -13,5 +14,11 @@
     </ion-button>
     <ion-button (click)="pauseMusic();">
         pause
+    </ion-button>
+    <ion-button (click)="nextMusic();">
+        next
+    </ion-button>
+    <ion-button (click)="showAudioList();">
+        list
     </ion-button>
 </ion-footer>
