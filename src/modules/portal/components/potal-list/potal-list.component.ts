@@ -24,7 +24,7 @@ export class PotalListComponent {
         this.audio?.play().catch();
     }
 
-    public stopMusic(): void {
-        this.audio.pause();
+    public pauseMusic(): void {
+        this.audio?.pause();
     }
 }

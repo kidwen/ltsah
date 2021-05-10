@@ -1,12 +1,15 @@
 :host(app-potal-list) {
-    button {
-        margin: 20px 60px;
-        height: 50px;
-    }
     ion-footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-basis: 1;
+        &::before {
+            display: none;
+        }
+        button {
+            margin: 20px 60px;
+            height: 50px;
+        }
     }
 }

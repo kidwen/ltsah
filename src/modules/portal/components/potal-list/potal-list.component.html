@@ -5,13 +5,13 @@
 
 </ion-content>
 <ion-footer>
-    <button (click)="playMusic();">
-        replay
-    </button>
-    <button (click)="continueMusic();">
+    <ion-button (click)="playMusic();">
+        {{ audio ? 'replay' : 'play' }}
+    </ion-button>
+    <ion-button (click)="continueMusic();">
         continue
-    </button>
-    <button (click)="stopMusic();">
-        stop
-    </button>
+    </ion-button>
+    <ion-button (click)="pauseMusic();">
+        pause
+    </ion-button>
 </ion-footer>
