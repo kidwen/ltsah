@@ -1,3 +1,4 @@
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PreloadAllModules, RouteReuseStrategy, RouterModule } from '@angular/router';
@@ -7,6 +8,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
+import { CommonInterceptor } from './shared/interceptor/common.interceptor';
 import { TankModule } from './tank/tank.module';
 
 @NgModule({
@@ -29,6 +31,9 @@ import { TankModule } from './tank/tank.module';
         {
             provide: RouteReuseStrategy,
             useClass: IonicRouteStrategy,
+        },
+        {
+            provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true,
         },
     ],
     bootstrap: [

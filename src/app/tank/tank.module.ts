@@ -16,6 +16,9 @@ const lazyModules: Routes = [{
 }, {
     path: 'user',
     loadChildren: () => import('../../modules/user/user.module').then(m => m.UserModule),
+}, {
+    path: 'pleasure',
+    loadChildren: () => import('../../modules/pleasure/pleasure.module').then(m => m.PleasureModule),
 }];
 
 const routes: Routes = [{
@@ -31,7 +34,7 @@ const routes: Routes = [{
     children: [
         {
             path: '',
-            redirectTo: 'potal',
+            redirectTo: 'pleasure',
             pathMatch: 'full',
         },
         ...lazyModules,

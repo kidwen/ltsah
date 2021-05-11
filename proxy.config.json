@@ -1,0 +1,9 @@
+{
+    "/lite": {
+      "target": "http://www.vision123.site/",
+      "secure": "false",
+      "pathRewrite":{
+        "/rootUrl-name/":"/"
+      }
+    }
+}
