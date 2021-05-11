@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "author": "kidwen",
     "scripts": {
-        "start": "ng serve --hmr --proxy-config proxy.config.json",
+        "start": "ng serve --hmr",
         "build": "ng build",
         "lint": "ng lint",
         "postinstall": "ngcc",
