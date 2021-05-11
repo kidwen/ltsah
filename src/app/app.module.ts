@@ -3,7 +3,6 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PreloadAllModules, RouteReuseStrategy, RouterModule } from '@angular/router';
 import { MusicControls } from '@ionic-native/music-controls/ngx';
-import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -25,7 +24,6 @@ import { TankModule } from './tank/tank.module';
     ],
     providers: [
         MusicControls,
-        NativeAudio,
         StatusBar,
         SplashScreen,
         {
