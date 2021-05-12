@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PleasureComponent } from './component/pleasure.component';
+import { ChannelComponent } from './component/channel/channel.component';
+import { PleasureComponent } from './component/pleasure/pleasure.component';
 
 const routes: Routes = [
     {
         path: '',
+        component: ChannelComponent,
+    }, {
+        path: 'pleasure',
         component: PleasureComponent,
     },
 ];

@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            喜闻乐见
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ng-container *ngFor="let channel of channels">
+        <ion-item button (click)="itemClick(channel);">
+            <ion-label class=" ion-text-wrap">
+                {{channel.type_name}}
+            </ion-label>
+        </ion-item>
+    </ng-container>
+</ion-content>

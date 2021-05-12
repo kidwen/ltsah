@@ -4,8 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-import { PleasureComponent } from './component/pleasure.component';
+import { ChannelComponent } from './component/channel/channel.component';
+import { PleasureComponent } from './component/pleasure/pleasure.component';
 import { PleasureRoutingModule } from './pleasure-routing.module';
+import { PleasureSharedService } from './services/pleasure-shared.service';
 
 @NgModule({
     imports: [
@@ -18,6 +20,8 @@ import { PleasureRoutingModule } from './pleasure-routing.module';
     ],
     declarations: [
         PleasureComponent,
+        ChannelComponent,
     ],
+    providers: [PleasureSharedService],
 })
 export class PleasureModule { }

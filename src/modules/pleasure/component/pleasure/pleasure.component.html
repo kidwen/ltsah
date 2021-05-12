@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
     <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button [icon]="'chevron-back-outline'"></ion-back-button>
+        </ion-buttons>
         <ion-title>
             喜闻乐见
         </ion-title>
@@ -12,8 +15,4 @@
     <ion-item>
         Stay tuned🤞
     </ion-item>
-</ion-content>
-
-<ion-content [fullscreen]="true">
-    <app-explore-container name="Some little fun"></app-explore-container>
 </ion-content>
