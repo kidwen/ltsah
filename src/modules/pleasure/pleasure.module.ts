@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { AudioComponent } from './component/audio/audio.component';
 import { ChannelComponent } from './component/channel/channel.component';
 import { PleasureComponent } from './component/pleasure/pleasure.component';
 import { PleasureRoutingModule } from './pleasure-routing.module';
@@ -21,6 +22,7 @@ import { PleasureSharedService } from './services/pleasure-shared.service';
     declarations: [
         PleasureComponent,
         ChannelComponent,
+        AudioComponent,
     ],
     providers: [PleasureSharedService],
 })
