@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Channel } from 'src/models';
+import { Audio } from 'src/models/audio.model';
 
 @Injectable({ providedIn: 'root' })
 export class PleasureSharedService {
@@ -78,5 +79,7 @@ export class PleasureSharedService {
         },
     ];
     public currentChannel?: Channel;
+
+    public currentAudio?: Audio;
 
 }

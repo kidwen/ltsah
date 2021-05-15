@@ -4,15 +4,16 @@
             <ion-back-button [icon]="'chevron-back-outline'"></ion-back-button>
         </ion-buttons>
         <ion-title>
-            喜闻乐见
+            {{title}}
         </ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-item>
-        Expanding...
-    </ion-item>
-    <ion-item>
-        Stay tuned🤞
-    </ion-item>
+    <ng-container *ngFor="let audio of audioList">
+        <ion-item button (click)="itemClick(audio);">
+            <ion-label class=" ion-text-wrap">
+                {{audio.model_name}}
+            </ion-label>
+        </ion-item>
+    </ng-container>
 </ion-content>
