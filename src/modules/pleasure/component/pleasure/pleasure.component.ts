@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Channel } from 'src/models';
-import { Audio, AudioListResponse } from 'src/models/audio.model';
+import { Audio, AudioListResponse, Channel } from '@kidwen/shared';
 import { PleasureSharedService } from '../../services/pleasure-shared.service';
 
 @Component({

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Channel } from 'src/models';
-import { Audio } from 'src/models/audio.model';
+import { Audio, Channel } from '@kidwen/shared';
 
 @Injectable({ providedIn: 'root' })
 export class PleasureSharedService {

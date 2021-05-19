@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Channel } from 'src/models';
+import { Channel } from '@kidwen/shared';
 import { PleasureSharedService } from '../../services/pleasure-shared.service';
 
 @Component({
