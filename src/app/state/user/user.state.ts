@@ -17,13 +17,13 @@ export class UserState {
 
     @Action(GetUser)
     public getUser(ctx: StateContext<UserModel>, id: string): Observable<void> {
+
         return of({ id: '123' }).pipe(
             tap(user => {
-                ctx.setState(state => user);
+                ctx.setState(user);
             }),
-            map(user => of(void 0)),
-            catchError(() => of(void 0)),
+            map(user => undefined),
+            catchError(() => undefined),
         );
     }
-
 }
