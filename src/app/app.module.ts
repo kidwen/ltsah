@@ -18,7 +18,7 @@ import { TankModule } from './tank/tank.module';
         BrowserModule,
         RouterModule.forRoot([], { preloadingStrategy: PreloadAllModules }),
         IonicModule.forRoot({
-            backButtonText: '<',
+            backButtonText: '',
         }),
         TankModule,
     ],

@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AudioListComponent } from './components/audio-list/audio-list.component';
 import { PotalListComponent } from './components/potal-list/potal-list.component';
 
 const routes: Routes = [{
     path: '',
     pathMatch: 'full',
     component: PotalListComponent,
+}, {
+    path: ':id',
+    component: AudioListComponent,
 }];
 
 @NgModule({
@@ -16,4 +20,5 @@ const routes: Routes = [{
         RouterModule,
     ],
 })
-export class PotalRoutingModule { }
+export class PotalRoutingModule {
+}
