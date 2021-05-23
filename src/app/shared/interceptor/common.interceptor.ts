@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CommonInterceptor implements HttpInterceptor {
-    private basisUrl: string = 'http://www.vision123.site';
+    private basisUrl: string = 'https://www.vision123.site';
     public intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         let url: string = req.url;
         if (url && url.indexOf('http') != 0) {
