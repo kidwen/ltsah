@@ -30,7 +30,7 @@ export class PotalListComponent {
     }
 
     public async showTrack(audio: AudioInfo): Promise<void> {
-        await this.navController.navigateForward([audio.audioId], {relativeTo: this.route});
+        await this.navController.navigateForward([audio.audioId], { relativeTo: this.route });
     }
 
     public async search(): Promise<void> {
@@ -40,7 +40,7 @@ export class PotalListComponent {
             this.audios = res?.audio_list;
             await this.interaction.toast(`数据,共计${this.audios?.length}条`);
         } catch (e) {
-            await this.interaction.toast(`程序挂了，凉凉${e.message}`);
+            await this.interaction.toast(`程序挂了，凉凉${(e as Error).message}`);
         }
     }
 }
