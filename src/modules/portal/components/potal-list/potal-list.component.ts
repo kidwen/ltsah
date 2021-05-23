@@ -34,6 +34,9 @@ export class PotalListComponent {
     }
 
     public async search(): Promise<void> {
+        if (!this.kw) {
+            return;
+        }
         try {
             await this.interaction.toast('请求接口了');
             let res: AudioSearch = await this.http.get<AudioSearch>(`audio/search`, this.kw, this.currentPage.toString());
