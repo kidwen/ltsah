@@ -8,7 +8,7 @@
         "lint": "ng lint",
         "postinstall": "ngcc",
         "capopen": "ng build --prod && npx cap sync && npx cap open android",
-        "debug:apk": "ng build --prod && cd ./android && gradle --no-daemon assembleDebug && adb devices && adb shell am force-stop io.ionic.starter && adb install -r ./app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n io.ionic.starter/io.ionic.starter.MainActivity"
+        "debug:apk": "ng build --prod && npx cap sync && cd ./android && gradle --no-daemon assembleDebug && adb devices && adb shell am force-stop io.ionic.starter && adb install -r ./app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n io.ionic.starter/io.ionic.starter.MainActivity"
     },
     "private": true,
     "dependencies": {
