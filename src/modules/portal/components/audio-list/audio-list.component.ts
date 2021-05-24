@@ -1,7 +1,7 @@
 import { AfterContentInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AlbumInfo, HttpService, InteractionService, Track } from '@kidwen/shared';
-import { MusicService } from '../../services/music.service';
+import { MusicService } from '@kidwen/shared';
 
 @Component({
     selector: 'app-audio-list',
@@ -35,8 +35,7 @@ export class AudioListComponent implements AfterContentInit {
     }
 
     public play(track: Track): void {
-        this.music.audio.src = track.url;
-        this.music.audio.play().catch(error => this.interaction.toast(`播放失败${error}`));
+        this.music.play(track.url);
     }
 
     public continueMusic(): void {

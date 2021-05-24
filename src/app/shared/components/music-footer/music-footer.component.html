@@ -1,0 +1,14 @@
+<ion-footer>
+    <ion-item lines="none">
+        <ion-avatar>
+            <img [src]="avatar">
+        </ion-avatar>
+        <ion-label>{{ name }}</ion-label>
+        <ion-buttons slot="end">
+            <ion-button shape="round" (click)="playOrStop();">
+                <ion-icon *ngIf="!playStatus" name="caret-forward-outline"></ion-icon>
+                <ion-icon *ngIf="playStatus" name="pause-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-item>
+</ion-footer>

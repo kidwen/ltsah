@@ -1,0 +1,30 @@
+:host(app-music-footer) {
+    width: 100%;
+    ion-footer {
+        height: 100%;
+        ion-item {
+            height: 100%;
+            ion-label {
+                margin-left: 20px;
+            }
+            ion-buttons {
+                ion-button {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0;
+                    border-radius: 50%;
+                    border: 1px solid #ff0;
+                    --padding-end: 0;
+                    --padding-start: 0;
+                    ion-icon {
+                        position: absolute;
+                        left: 5px;
+                    }
+                }
+            }
+        }
+        &::before {
+            height: 0;
+        }
+    }
+}

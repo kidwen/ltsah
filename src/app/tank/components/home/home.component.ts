@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MusicService } from '@kidwen/shared';
 
 @Component({
     selector: 'app-home',
@@ -6,7 +7,17 @@ import { Component } from '@angular/core';
     styleUrls: ['./home.component.scss'],
 })
 
-export class HomeComponent  {
+export class HomeComponent {
 
-    public realTimeHotspot: string = '湖南某聂姓名男子居然是万人迷';
+    public constructor(
+        private music: MusicService,
+    ) { }
+
+    public playOrStopEvent(play: boolean): void {
+        if (play) {
+            this.music.play();
+        } else {
+            this.music.stop();
+        }
+    }
 }
