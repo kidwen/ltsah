@@ -17,15 +17,30 @@ export class MusicService {
     ) { }
 
     public play(src?: string): void {
-        let musicChange: boolean = false;
-        if (this.src !== src) {
+        // 播放中，改变播放音频
+        if (this.playStatus && this.src !== src) {
+            this.src = src;
             this.audio.src = src;
-            musicChange = true;
+            this.audio.play().catch(error => this.interaction.toast(`播放失败${error}`));
         }
-        this.audio.play().catch(error => this.interaction.toast(`播放失败${error}`));
-        this.src = src;
-        this.playStatus = musicChange ?? !this.playStatus;
-        this.sub.next(this.playStatus);
+        // 播放中，未改变音频
+        if (this.playStatus && this.src === src) {
+            return;
+        }
+        // 未播放, 改变音频
+        if (!this.playStatus && this.src !== src && src) {
+            this.src = src;
+            this.audio.src = src;
+            this.audio.play().catch(error => this.interaction.toast(`播放失败${error}`));
+            this.playStatus = !this.playStatus;
+            this.sub.next(this.playStatus);
+        }
+        // 未播放，未改变音频
+        if ((!this.playStatus && this.src === src) || (!this.playStatus && this.src && !src)) {
+            this.audio.play().catch(error => this.interaction.toast(`播放失败${error}`));
+            this.playStatus = !this.playStatus;
+            this.sub.next(this.playStatus);
+        }
     }
 
     public stop(): void {
