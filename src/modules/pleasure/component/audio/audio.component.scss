@@ -1,0 +1,17 @@
+:host {
+    ion-card {
+        ion-card-header {
+            ion-card-title {
+                font-size: 1.1rem;
+            }
+
+            .ui-miscellaneous {
+                display: flex;
+
+                ion-icon {
+                    margin: auto 0;
+                }
+            }
+        }
+    }
+}

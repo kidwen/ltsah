@@ -9,10 +9,25 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-item>
+    <!-- <ion-item>
         Expanding...
     </ion-item>
     <ion-item>
         Stay tuned🤞
-    </ion-item>
+    </ion-item> -->
+    <ng-container *ngFor="let album of albums">
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>{{album.name}}</ion-card-title>
+                <ion-card-subtitle>{{album.intro}}</ion-card-subtitle>
+                <div class="ui-miscellaneous">
+                    <ion-icon name="play-outline"></ion-icon>{{album.playCount}}
+                </div>
+            </ion-card-header>
+        </ion-card>
+    </ng-container>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMoreData($event);">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载中...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
