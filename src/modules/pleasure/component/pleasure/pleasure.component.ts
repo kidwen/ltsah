@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Audio, AudioListResponse, Channel } from '@kidwen/shared';
+import { Router } from '@angular/router';
+import { Audio, Channel } from '@kidwen/shared';
 import { PleasureSharedService } from '../../services/pleasure-shared.service';
 
 @Component({
@@ -13,14 +13,13 @@ export class PleasureComponent implements OnInit {
 
     public audioList: Array<Audio> = [];
 
-    public title: string = '喜闻乐见';
+    public title: string = '';
 
     private channel?: Channel;
 
     private page: number = 1;
 
     public constructor(
-        private activatedRoute: ActivatedRoute,
         private http: HttpClient,
         private router: Router,
         private pleasureSharedService: PleasureSharedService,
@@ -30,9 +29,9 @@ export class PleasureComponent implements OnInit {
 
     public ngOnInit(): void {
         this.channel = this.pleasureSharedService.currentChannel;
-        this.title = this.channel?.type_name ?? '';
-        this.http.get<AudioListResponse>(`${this.channel.url}/${this.page}`).subscribe(r => {
-            this.audioList = r.res_data;
+        this.title = this.channel?.type_name ?? '喜闻乐见';
+        this.http.get<Array<Audio>>(`${this.channel.url}/${this.page}`).subscribe(r => {
+            this.audioList = r;
         });
     }
 

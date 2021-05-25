@@ -11,3 +11,22 @@ export interface AlbumInfo {
     trackTotalCount?: number;
     tracks?: Array<Track>;
 }
+
+export interface AlbumListResponse {
+    pageNum: number;
+    audio_list: Array<Album>;
+    typeNum: number;
+    pageSize: number;
+}
+
+export interface Album {
+    albumTrackCount: number;
+    audioId: number;
+    author: string;
+    intro: string;
+    isFinished: number;
+    isPaid: boolean;
+    name: string;
+    playCount: number;
+    url: string;
+}
