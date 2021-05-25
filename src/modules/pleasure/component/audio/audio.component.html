@@ -4,19 +4,13 @@
             <ion-back-button></ion-back-button>
         </ion-buttons>
         <ion-title>
-            喜闻乐见
+            {{title}}
         </ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <!-- <ion-item>
-        Expanding...
-    </ion-item>
-    <ion-item>
-        Stay tuned🤞
-    </ion-item> -->
     <ng-container *ngFor="let album of albums">
-        <ion-card>
+        <ion-card (click)="cardClick(album);">
             <ion-card-header>
                 <ion-card-title>{{album.name}}</ion-card-title>
                 <ion-card-subtitle>{{album.intro}}</ion-card-subtitle>

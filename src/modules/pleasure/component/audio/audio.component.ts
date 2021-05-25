@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonInfiniteScroll } from '@ionic/angular';
+import { Album, AlbumListResponse, Audio, InteractionService } from '@kidwen/shared';
+import { Observable } from 'rxjs';
+import { PleasureSharedService } from '../../services/pleasure-shared.service';
 
 @Component({
     selector: 'app-audio',
@@ -9,43 +14,50 @@ import { IonInfiniteScroll } from '@ionic/angular';
 
 export class AudioComponent {
 
-    public albums: Array<any> = [{
-        'albumTrackCount': 270,
-        'audioId': 48433269,
-        'author': '凤洋有声',
-        'intro': '民间灵异悬疑阴阳风水免费听',
-        'isFinished': 0,
-        'isPaid': false,
-        'name': '我的捉鬼往事 | 免费灵异悬疑阴阳风水',
-        'playCount': 13698200,
-        'url': 'audio/source/48433269/1',
-    },
-    {
-        'albumTrackCount': 1324,
-        'audioId': 26478515,
-        'author': '音君而遇文化传媒',
-        'intro': '一个把江湖搅得乌烟瘴气的疯子',
-        'isFinished': 1,
-        'isPaid': false,
-        'name': '老街中的痞子（免费）',
-        'playCount': 727138136,
-        'url': 'audio/source/26478515/1',
-    },
-    {
-        'albumTrackCount': 2360,
-        'audioId': 26438796,
-        'author': '果维听书',
-        'intro': '他银针渡人,术法渡魂,成就济世仁心',
-        'isFinished': 1,
-        'isPaid': false,
-        'name': '都市奇门医圣（果维福利免费版）',
-        'playCount': 2018867810,
-        'url': 'audio/source/26438796/1',
-    }]
+    public albums: Array<Album> = [];
 
-    public constructor() { }
+    public title: string = '';
+
+    private resourceName: string = 'audio/channel';
+
+    private audio: Audio;
+    private page: number = 1;
+    private maxPage?: number;
+
+    public constructor(
+        private router: Router,
+        private interaction: InteractionService,
+        private http: HttpClient,
+        private pleasureSharedService: PleasureSharedService,
+    ) {
+        this.audio = this.pleasureSharedService.currentAudio;
+        this.title = this.audio.model_name ?? '喜闻乐见';
+        this.getData().subscribe(res => {
+            this.albums = res.audio_list;
+            this.maxPage = res.pageSize;
+        });
+    }
 
     public async loadMoreData(event: { target: IonInfiniteScroll }): Promise<void> {
-        await event.target.complete();
+        if (this.maxPage && this.maxPage == this.page) {
+            setTimeout(async () => {
+                await this.interaction.toast('已经到底了😊');
+                await event.target.complete();
+            }, 500);
+            return;
+        }
+        this.page += 1;
+        this.getData().subscribe(async r => {
+            this.albums = [...this.albums, ...r.audio_list];
+            await event.target.complete();
+        });
+    }
+
+    public cardClick(album: Album): void {
+        this.router.navigate([`home/potal/${album.audioId}`]).then().catch();
+    }
+
+    private getData(): Observable<AlbumListResponse> {
+        return this.http.get<AlbumListResponse>(`${this.resourceName}/${this.audio.relationMetadataValueId}/${this.page}`);
     }
 }
