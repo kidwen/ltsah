@@ -9,13 +9,13 @@
             }
             ion-buttons {
                 ion-button {
+                    --padding-end: 0;
+                    --padding-start: 0;
                     width: 30px;
                     height: 30px;
                     margin: 0;
+                    border: 1px solid #000;
                     border-radius: 50%;
-                    border: 1px solid #ff0;
-                    --padding-end: 0;
-                    --padding-start: 0;
                     ion-icon {
                         position: absolute;
                         left: 5px;

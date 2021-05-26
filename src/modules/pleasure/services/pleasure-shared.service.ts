@@ -5,76 +5,94 @@ import { Audio, Channel } from '@kidwen/shared';
 export class PleasureSharedService {
     public channels: Array<Channel> = [
         {
+            id: '7',
             type_name: '小说',
-            url: 'audio/list/7',
+            url: 'audio/list',
         },
         {
+            id: '9',
             type_name: '相声小品',
-            url: 'audio/list/9',
+            url: 'audio/list',
         },
         {
+            id: '13',
             type_name: '娱乐',
-            url: 'audio/list/13',
+            url: 'audio/list',
         },
         {
+            id: '17',
             type_name: '人文',
-            url: 'audio/list/17',
+            url: 'audio/list',
         },
         {
+            id: '24',
             type_name: '头条',
-            url: 'audio/list/24',
+            url: 'audio/list',
         },
         {
+            id: '16',
             type_name: '历史',
-            url: 'audio/list/16',
+            url: 'audio/list',
         },
         {
+            id: '26',
             type_name: '投资理财',
-            url: 'audio/list/26',
+            url: 'audio/list',
         },
         {
+            id: '22',
             type_name: '健康',
-            url: 'audio/list/22',
+            url: 'audio/list',
         },
         {
+            id: '15',
             type_name: '影视',
-            url: 'audio/list/15',
+            url: 'audio/list',
         },
         {
+            id: '27',
             type_name: '商业管理',
-            url: 'audio/list/27',
+            url: 'audio/list',
         },
         {
+            id: '29',
             type_name: '英语',
-            url: 'audio/list/29',
+            url: 'audio/list',
         },
         {
+            id: '12',
             type_name: '少儿教育',
-            url: 'audio/list/12',
+            url: 'audio/list',
         },
         {
+            id: '28',
             type_name: '科技',
-            url: 'audio/list/28',
+            url: 'audio/list',
         },
         {
+            id: '32',
             type_name: '教育考试',
-            url: 'audio/list/32',
+            url: 'audio/list',
         },
         {
+            id: '25',
             type_name: '体育',
-            url: 'audio/list/25',
+            url: 'audio/list',
         },
         {
+            id: '30',
             type_name: '小语种',
-            url: 'audio/list/30',
+            url: 'audio/list',
         },
         {
+            id: '8',
             type_name: '广播剧',
-            url: 'audio/list/8',
+            url: 'audio/list',
         },
         {
+            id: '23',
             type_name: '汽车',
-            url: 'audio/list/23',
+            url: 'audio/list',
         },
     ];
     public currentChannel?: Channel;

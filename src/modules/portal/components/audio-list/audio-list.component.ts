@@ -29,7 +29,7 @@ export class AudioListComponent implements AfterContentInit {
 
     public async ngAfterContentInit(): Promise<void> {
         if (this.audioId) {
-            let data: { data: AlbumInfo } = await this.http.get<{ data: AlbumInfo }>(`audio/source`, this.audioId, this.pageNum.toString());
+            let data: { data: AlbumInfo } = await this.http.get<{ data: AlbumInfo }>(`audio/source`, this.audioId, '', { page: this.pageNum.toString() });
             this.audios = data?.data.tracks;
         }
     }

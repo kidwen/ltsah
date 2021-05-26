@@ -38,12 +38,10 @@ export class PotalListComponent {
             return;
         }
         try {
-            await this.interaction.toast('请求接口了');
-            let res: AudioSearch = await this.http.get<AudioSearch>(`audio/search`, this.kw, this.currentPage.toString());
+            let res: AudioSearch = await this.http.get<AudioSearch>(`audio/search`, this.kw, '', { page: this.currentPage.toString() });
             this.audios = res?.audio_list;
-            await this.interaction.toast(`数据,共计${this.audios?.length}条`);
         } catch (e) {
-            await this.interaction.toast(`程序挂了，凉凉${(e as Error).message}`);
+            await this.interaction.toast(`凉凉${(e as Error).message}`);
         }
     }
 }
