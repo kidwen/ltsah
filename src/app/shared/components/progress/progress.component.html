@@ -1,0 +1,40 @@
+<ng-template #progressInfoTemplate>
+    <span class="ui-progress-text" *ngIf="showInfo">
+        <ng-template #formatTemplate>
+            {{ format }}
+        </ng-template>
+    </span>
+</ng-template>
+
+<div [ngClass]="'ui-progress ui-progress-status-' + getStatus" [class.ui-progress-line]="type == 'line'" [class.ui-progress-small]="size == 'small'" [class.ui-progress-show-info]="showInfo" [class.ui-progress-circle]="isCircleStyle" [class.ui-progress-steps]="isSteps">
+    <!-- line progress -->
+    <div *ngIf="type === 'line'">
+        <ng-container *ngIf="!isSteps">
+            <div class="ui-progress-outer" *ngIf="!isSteps">
+                <div class="ui-progress-inner">
+                    <div class="ui-progress-bg" [style.width.%]="percent" [style.border-radius]="strokeLinecap === 'round' ? '100px' : '0'" [style.background]="!isGradient ? strokeColor : null" [style.background-image]="isGradient ? lineGradient : null" [style.height.px]="getStrokeWidth"></div>
+                    <div *ngIf="successPercent || successPercent === 0" class="ui-progress-success-bg" [style.width.%]="successPercent" [style.border-radius]="strokeLinecap === 'round' ? '100px' : '0'" [style.height.px]="getStrokeWidth"></div>
+                </div>
+            </div>
+            <ng-template [ngTemplateOutlet]="progressInfoTemplate"></ng-template>
+        </ng-container>
+        <!-- Step style progress -->
+        <div class="ui-progress-steps-outer" *ngIf="isSteps">
+            <div *ngFor="let step of steps; let i = index" class="ui-progress-steps-item" [ngStyle]="step"></div>
+            <ng-template [ngTemplateOutlet]="progressInfoTemplate"></ng-template>
+        </div>
+    </div>
+    <!-- circle / dashboard progress -->
+    <div [style.width.px]="this.width" [style.height.px]="this.width" [style.fontSize.px]="this.width * 0.15 + 6" class="ui-progress-inner" [class.ui-progress-circle-gradient]="isGradient" *ngIf="isCircleStyle">
+        <svg class="ui-progress-circle " viewBox="0 0 100 100">
+            <defs *ngIf="isGradient">
+                <linearGradient [id]="'gradient-' + gradientId" x1="100%" y1="0%" x2="0%" y2="0%">
+                    <stop *ngFor="let i of circleGradient" [attr.offset]="i.offset" [attr.stop-color]="i.color"></stop>
+                </linearGradient>
+            </defs>
+            <path class="ui-progress-circle-trail" stroke="#f3f3f3" fill-opacity="0" [attr.stroke-width]="getStrokeWidth" [attr.d]="pathString" [ngStyle]="trailPathStyle"></path>
+            <path *ngFor="let p of progressCirclePath; trackBy: trackByFn" class="ui-progress-circle-path" fill-opacity="0" [attr.d]="pathString" [attr.stroke-linecap]="strokeLinecap" [attr.stroke]="p.stroke" [attr.stroke-width]="percent ? getStrokeWidth : 0" [ngStyle]="p.strokePathStyle"></path>
+        </svg>
+        <ng-template [ngTemplateOutlet]="progressInfoTemplate"></ng-template>
+    </div>
+</div>

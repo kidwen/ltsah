@@ -9,6 +9,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
+    <app-progress [percent]="percent" type="circle"></app-progress>
     <ng-container *ngFor="let channel of channels">
         <ion-item button (click)="itemClick(channel);">
             <ion-label class=" ion-text-wrap">

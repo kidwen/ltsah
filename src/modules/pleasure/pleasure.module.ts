@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { AudioComponent } from './component/audio/audio.component';
 import { ChannelComponent } from './component/channel/channel.component';
@@ -18,6 +19,7 @@ import { PleasureSharedService } from './services/pleasure-shared.service';
         ExploreContainerComponentModule,
         RouterModule.forChild([{ path: '', component: PleasureComponent }]),
         PleasureRoutingModule,
+        SharedModule,
     ],
     declarations: [
         PleasureComponent,
