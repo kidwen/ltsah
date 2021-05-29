@@ -1,6 +1,6 @@
 ![CI][CI]
 
-# lookMe
+# Itsah
 
 Use [ionic](https://ionicframework.com/docs/)、 [capacitor](https://capacitor.ionicframework.com/) and [ionicons](https://ionicons.com/)
 
