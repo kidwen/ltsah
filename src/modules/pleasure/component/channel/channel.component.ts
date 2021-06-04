@@ -12,7 +12,7 @@ import { PleasureSharedService } from '../../services/pleasure-shared.service';
 
 export class ChannelComponent {
     public channels: Array<Channel> = [];
-
+    public percent: number = 0;
     public constructor(
         private router: Router,
         private http: HttpClient,
@@ -20,6 +20,10 @@ export class ChannelComponent {
         private pleasureSharedService: PleasureSharedService,
     ) {
         this.channels = this.pleasureSharedService.channels;
+        setInterval(() => {
+            this.percent = this.percent + 1;
+            console.log(this.percent);
+        }, 100);
     }
 
     public itemClick(channel: Channel): void {
