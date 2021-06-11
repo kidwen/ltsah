@@ -5,10 +5,12 @@
         </ion-avatar>
         <ion-label>{{ name }}</ion-label>
         <ion-buttons slot="end">
-            <ion-button shape="round" (click)="playOrStop();">
+
+            <app-progress [percent]="percent" type="circle" [showInfo]="false" [width]="32" [strokeColor]="strokeColor"
+                (click)="playOrStop();">
                 <ion-icon *ngIf="!playStatus" name="caret-forward-outline"></ion-icon>
                 <ion-icon *ngIf="playStatus" name="pause-outline"></ion-icon>
-            </ion-button>
+            </app-progress>
         </ion-buttons>
     </ion-item>
 </ion-footer>
