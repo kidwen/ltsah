@@ -19,6 +19,8 @@ export class MusicFooterComponent {
 
     public playStatus: boolean = false;
 
+    public strokeColor: string = '#505050';
+
     public constructor(
         private music: MusicService,
     ) {
@@ -28,6 +30,7 @@ export class MusicFooterComponent {
     }
 
     public playOrStop(): void {
+        console.info(1);
         if (!this.music.src) {
             return;
         }

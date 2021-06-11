@@ -9,7 +9,10 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <app-progress [percent]="percent" type="circle"></app-progress>
+    <app-progress [percent]="percent" type="circle" [showInfo]="false" [width]="32" [statusColorMap]="statusColorMap"
+        [strokeColor]="strokeColor">
+        <ion-icon name="caret-forward-outline"></ion-icon>
+    </app-progress>
     <ng-container *ngFor="let channel of channels">
         <ion-item button (click)="itemClick(channel);">
             <ion-label class=" ion-text-wrap">

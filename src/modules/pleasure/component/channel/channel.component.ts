@@ -13,6 +13,15 @@ import { PleasureSharedService } from '../../services/pleasure-shared.service';
 export class ChannelComponent {
     public channels: Array<Channel> = [];
     public percent: number = 0;
+
+    public statusColorMap: Map<string, string> = new Map([
+        ['normal', '#D7D7D7'],
+        ['exception', '#D7D7D7'],
+        ['success', '#D7D7D7'],
+    ]);
+
+    public strokeColor: string = '#505050';
+
     public constructor(
         private router: Router,
         private http: HttpClient,
@@ -22,7 +31,6 @@ export class ChannelComponent {
         this.channels = this.pleasureSharedService.channels;
         setInterval(() => {
             this.percent = this.percent + 1;
-            console.log(this.percent);
         }, 100);
     }
 

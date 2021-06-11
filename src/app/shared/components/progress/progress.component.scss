@@ -1,10 +1,10 @@
 :host {
     --ui-progress-font-size: 14px;
     --ui-progress-font-size-sm: 12px;
-    --ui-progress-text-color: #303339;
+    --ui-progress-text-color: #505050;
     --ui-progress-default-color: #0099ff;
     --ui-progress-activing-color: #ffffff;
-    --ui-progress-success-color: #66cc66;
+    --ui-progress-success-color: #505050;
     --ui-progress-error-color: #ff5555;
     --ui-progress-remaining-color: #e6e8ee;
     --ui-progress-steps-item-bg-color: #e6e8ee;
@@ -89,7 +89,7 @@
         width: 2em;
         margin-left: 8px;
         color: var(--ui-progress-text-color);
-        font-size: 1em;
+        font-size: 1.75em;
         line-height: 1;
         white-space: nowrap;
         text-align: left;
