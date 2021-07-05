@@ -1,7 +1,6 @@
 import { AfterContentInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AlbumInfo, HttpService, InteractionService, Track } from '@kidwen/shared';
-import { MusicService } from '@kidwen/shared';
+import { AlbumInfo, HttpService, InteractionService, Track, MusicService } from '@kidwen/shared';
 
 @Component({
     selector: 'app-audio-list',
@@ -14,7 +13,7 @@ export class AudioListComponent implements AfterContentInit {
 
     private audioId?: string;
 
-    private pageNum: Number = 1;
+    private pageNum: number = 1;
 
     public constructor(
         private route: ActivatedRoute,

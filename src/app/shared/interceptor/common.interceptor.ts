@@ -10,7 +10,7 @@ export class CommonInterceptor implements HttpInterceptor {
         if (url && url.indexOf('http') != 0) {
             url = `${this.basisUrl}/${req.url}`;
         }
-        let authReq: HttpRequest<any> = req.clone({ url });
+        const authReq: HttpRequest<any> = req.clone({ url });
         return next.handle(authReq);
     }
 }

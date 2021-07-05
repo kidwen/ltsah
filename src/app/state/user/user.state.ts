@@ -16,12 +16,12 @@ export interface UserModel {
 export class UserState {
 
     @Action(GetUser)
-    public getUser(ctx: StateContext<UserModel>, id: string): Observable<void> {
+    public getUser(ctx: StateContext<UserModel>): Observable<void> {
         return of({ id: '123' }).pipe(
             tap(user => {
-                ctx.setState(state => user);
+                ctx.setState(() => user);
             }),
-            map(user => of(void 0)),
+            map(() => of(void 0)),
             catchError(() => of(void 0)),
         );
     }

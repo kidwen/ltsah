@@ -11,12 +11,12 @@ import { Observable } from 'rxjs';
 })
 export class UserPreviewComponent implements OnInit {
 
-    public user?: User;
-
-    public num: number = 1;
-
     @Select((state: StateStore) => state.user)
     public user$: Observable<User>;
+
+   public user?: User;
+
+    public num: number = 1;
 
     public constructor(
         @Inject(DOCUMENT) private document: HTMLDocument,
@@ -26,7 +26,7 @@ export class UserPreviewComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        console.info('--hmr 无刷新Init，没有改变的话保存也不刷新');
+        console.error('--hmr 无刷新Init，没有改变的话保存也不刷新');
         this.user = {
             avatarUrl: '',
         };

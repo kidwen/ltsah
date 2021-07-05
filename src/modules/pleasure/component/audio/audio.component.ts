@@ -39,7 +39,7 @@ export class AudioComponent {
     }
 
     public async loadMoreData(event: { target: IonInfiniteScroll }): Promise<void> {
-        if (this.maxPage && this.maxPage == this.page) {
+        if (this.maxPage && this.maxPage === this.page) {
             setTimeout(async () => {
                 await this.interaction.toast('已经到底了😊');
                 await event.target.complete();

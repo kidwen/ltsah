@@ -38,7 +38,7 @@ export class PotalListComponent {
             return;
         }
         try {
-            let res: AudioSearch = await this.http.get<AudioSearch>(`audio/search`, this.kw, '', { page: this.currentPage.toString() });
+            const res: AudioSearch = await this.http.get<AudioSearch>(`audio/search`, this.kw, '', { page: this.currentPage.toString() });
             this.audios = res?.audio_list;
         } catch (e) {
             await this.interaction.toast(`凉凉${(e as Error).message}`);

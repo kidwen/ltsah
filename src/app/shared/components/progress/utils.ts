@@ -5,7 +5,7 @@ function stripPercentToNumber(percent: string): number {
 }
 
 export const sortGradient: (gradients: ProgressGradientProgress) => Array<{ key: number; value: string }> = (gradients: ProgressGradientProgress) => {
-    let tempArr: Array<{ key: number; value: string }> = [];
+    const tempArr: Array<{ key: number; value: string }> = [];
 
     Object.keys(gradients).forEach(key => {
         const value: string = gradients[key];

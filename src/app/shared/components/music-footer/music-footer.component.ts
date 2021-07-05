@@ -30,7 +30,6 @@ export class MusicFooterComponent {
     }
 
     public playOrStop(): void {
-        console.info(1);
         if (!this.music.src) {
             return;
         }

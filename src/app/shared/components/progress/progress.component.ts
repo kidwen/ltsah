@@ -158,7 +158,7 @@ export class ProgressComponent implements OnChanges, OnDestroy {
     private defaultFormatter: ProgressFormatter = (p: number): string => `${p}%`;
 
     private updateIcon(): void {
-        const ret: string | undefined = this.statusIconNameMap.get(this.getStatus + (this.isCircleStyle ? '-o' : '-fill'));
+        // const ret: string | undefined = this.statusIconNameMap.get(this.getStatus + (this.isCircleStyle ? '-o' : '-fill'));
     }
 
     private getSteps(): void {
