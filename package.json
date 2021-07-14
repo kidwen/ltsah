@@ -31,7 +31,7 @@
         "cordova-plugin-music-controls2": "^3.0.5",
         "ionic-audio": "^3.2.2",
         "rxjs": "^6.6.3",
-        "tslib": "^2.0.3",
+        "tslib": "^2.3.0",
         "zone.js": "^0.11.3"
     },
     "devDependencies": {
