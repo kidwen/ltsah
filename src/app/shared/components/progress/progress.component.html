@@ -5,8 +5,8 @@
     </span>
 </ng-template>
 
-<div [ngClass]="'ui-progress ui-progress-status-' + getStatus" [class.ui-progress-line]="type == 'line'"
-    [class.ui-progress-small]="size == 'small'" [class.ui-progress-show-info]="showInfo"
+<div [ngClass]="'ui-progress ui-progress-status-' + getStatus" [class.ui-progress-line]="type === 'line'"
+    [class.ui-progress-small]="size === 'small'" [class.ui-progress-show-info]="showInfo"
     [class.ui-progress-circle]="isCircleStyle" [class.ui-progress-steps]="isSteps">
     <!-- line progress -->
     <div *ngIf="type === 'line'">
