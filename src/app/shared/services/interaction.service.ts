@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Plugins, StatusBarStyleOptions } from '@capacitor/core';
+import { StatusBar, StyleOptions } from '@capacitor/status-bar';
 import { ActionSheetController, AlertController, LoadingController, ModalController, PickerController, Platform, PopoverController, ToastController } from '@ionic/angular';
 import { ActionSheetButton, Color, OverlayEventDetail } from '@ionic/core';
 import { isObservable, Observable, Subject, Subscription } from 'rxjs';
@@ -258,17 +258,17 @@ export class InteractionService {
     }
 
     public async setStatusBarColor(color: string): Promise<void> {
-        if (color && this.platform.is('hybrid') && Plugins.StatusBar) {
+        if (color && this.platform.is('hybrid') && StatusBar) {
             try {
-                await Plugins.StatusBar.setBackgroundColor({ color });
+                await StatusBar.setBackgroundColor({ color });
             } catch { }
         }
     }
 
-    public async setStatusBarStyle(option: StatusBarStyleOptions): Promise<void> {
-        if (option && this.platform.is('hybrid') && Plugins.StatusBar) {
+    public async setStatusBarStyle(option: StyleOptions): Promise<void> {
+        if (option && this.platform.is('hybrid') && StatusBar) {
             try {
-                await Plugins.StatusBar.setStyle(option);
+                await StatusBar.setStyle(option);
             } catch { }
         }
     }

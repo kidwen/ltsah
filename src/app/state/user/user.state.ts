@@ -21,8 +21,8 @@ export class UserState {
             tap(user => {
                 ctx.setState(() => user);
             }),
-            map(() => of(void 0)),
-            catchError(() => of(void 0)),
+            map(() => void 0),
+            catchError(() => void 0),
         );
     }
 
