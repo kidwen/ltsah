@@ -20,7 +20,7 @@
         "@angular/router": "^12.2.4",
         "@auth0/angular-jwt": "^5.0.2",
         "@capacitor/android": "^3.1.2",
-        "@capacitor/core": "^3.1.2",
+        "@capacitor/core": "^3.2.1",
         "@capacitor/status-bar": "^1.0.2",
         "@ionic-native/core": "^5.33.1",
         "@ionic-native/music-controls": "^5.32.1",
