@@ -21,7 +21,7 @@
         "@auth0/angular-jwt": "^5.0.2",
         "@capacitor/android": "^3.2.3",
         "@capacitor/core": "^3.2.5",
-        "@capacitor/status-bar": "^1.0.3",
+        "@capacitor/status-bar": "^1.0.5",
         "@ionic-native/core": "^5.33.1",
         "@ionic-native/music-controls": "^5.32.1",
         "@ionic-native/splash-screen": "^5.33.1",
