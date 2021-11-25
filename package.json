@@ -19,7 +19,7 @@
         "@angular/platform-browser-dynamic": "^12.2.11",
         "@angular/router": "^12.2.11",
         "@auth0/angular-jwt": "^5.0.2",
-        "@capacitor/android": "^3.2.3",
+        "@capacitor/android": "^3.3.0",
         "@capacitor/core": "^3.2.5",
         "@capacitor/status-bar": "^1.0.5",
         "@ionic-native/core": "^5.33.1",
