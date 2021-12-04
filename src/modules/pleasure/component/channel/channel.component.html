@@ -12,7 +12,7 @@
     <ng-container *ngFor="let channel of channels">
         <ion-item button (click)="itemClick(channel);">
             <ion-label class=" ion-text-wrap">
-                {{channel.type_name}}
+                {{channel['type_name']}}
             </ion-label>
         </ion-item>
     </ng-container>

@@ -14,6 +14,7 @@ export interface AlbumInfo {
 
 export interface AlbumListResponse {
     pageNum: number;
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     audio_list: Array<Album>;
     typeNum: number;
     pageSize: number;
