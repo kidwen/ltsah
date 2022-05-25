@@ -7,27 +7,27 @@ import { IonicModule } from '@ionic/angular';
 import { components } from './components';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        HttpClientModule,
-        FormsModule,
-        ReactiveFormsModule,
-        RouterModule,
-        IonicModule,
-    ],
-    declarations: [
-        ...components,
-    ],
-    exports: [
-        CommonModule,
-        HttpClientModule,
-        FormsModule,
-        ReactiveFormsModule,
-        RouterModule,
-        IonicModule,
-        ...components,
-    ],
-    entryComponents: [],
-    providers: [],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    IonicModule,
+  ],
+  declarations: [
+    ...components,
+  ],
+  exports: [
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    IonicModule,
+    ...components,
+  ],
+  entryComponents: [],
+  providers: [],
 })
 export class SharedModule { }
