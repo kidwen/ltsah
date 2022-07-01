@@ -27,7 +27,7 @@
     "@capacitor/status-bar": "^1.0.8",
     "@ionic/angular": "^6.1.9",
     "@ionic/pwa-elements": "^3.1.1",
-    "@ngxs/store": "^3.7.1",
+    "@ngxs/store": "^3.7.4",
     "cordova-plugin-music-controls2": "^3.0.6",
     "cordova-plugin-splashscreen": "^6.0.1",
     "cordova-plugin-statusbar": "^3.0.0",
