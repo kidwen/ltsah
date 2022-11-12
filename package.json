@@ -23,7 +23,7 @@
     "@awesome-cordova-plugins/splash-screen": "^5.45.0",
     "@awesome-cordova-plugins/status-bar": "^5.44.0",
     "@capacitor/android": "^3.8.0",
-    "@capacitor/core": "^3.6.0",
+    "@capacitor/core": "^3.9.0",
     "@capacitor/status-bar": "^1.0.8",
     "@ionic/angular": "^6.2.7",
     "@ionic/pwa-elements": "^3.1.1",
