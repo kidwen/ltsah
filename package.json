@@ -25,7 +25,7 @@
     "@capacitor/android": "^3.8.0",
     "@capacitor/core": "^3.9.0",
     "@capacitor/status-bar": "^1.0.8",
-    "@ionic/angular": "^6.7.4",
+    "@ionic/angular": "^6.7.5",
     "@ionic/pwa-elements": "^3.1.1",
     "@ngxs/store": "^3.8.1",
     "cordova-plugin-music-controls2": "^3.0.6",
