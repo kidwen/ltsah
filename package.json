@@ -13,7 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/common": "^13.2.0",
-    "@angular/core": "^13.2.0",
+    "@angular/core": "^19.2.18",
     "@angular/forms": "^13.2.0",
     "@angular/platform-browser": "^13.2.0",
     "@angular/platform-browser-dynamic": "^13.2.0",
